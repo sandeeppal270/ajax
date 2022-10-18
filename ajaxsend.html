@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example ajaxSend()</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $(document).ajaxSend(function(event,xhr,option){
+                    alert("The requst is about to be sent \n Request URL:"+option.url+"");
+
+                });
+                $("#response").load("demo.html");
+
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Example ajaxSend()</h1>
+    <button id="btn">Click</button>
+    <div id="response"></div>
+    
+</body>
+</html>
