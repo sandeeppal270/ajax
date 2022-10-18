@@ -10,7 +10,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $(document).ajaxError(function(event,xhr,option){
-                alert("An error occurs when excuting the request \n URL:"+option.url);
+                alert("An error occurs when excuting the request \n URL:"+option.url+"\n Status:"+ xhr.status+":"+xhr.statusText);
             });
             $("#btn1").click(function(){
                
