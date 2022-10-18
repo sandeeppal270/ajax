@@ -1,0 +1,1 @@
+alert("hello world \n this is ajax method");
